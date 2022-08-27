@@ -1,15 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Main from "./Components/Main/Main"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        { process.env.REACT_APP_TEST }
-      </header>
-    </div>
-  );
+    return (
+        <div className="darkTheme">
+            <Main />
+            <section className="fullscreen background"></section>
+        </div>
+    );
 }
 
 export default App;

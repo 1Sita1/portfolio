@@ -1,0 +1,21 @@
+@use "./reset";
+@use "./Abstracts/colors" as *;
+@use "./Abstracts/mixins" as *;
+
+
+.darkTheme {
+    @include makeTheme($gray-200, $dark-400, $dark-800, $green-700)
+}
+
+
+
+.main-section {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    background-color: $indigo-900;
+    height: 90vh;
+}
+
+.main-section > article {
+    margin: 0 60px;
+}

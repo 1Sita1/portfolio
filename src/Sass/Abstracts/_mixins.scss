@@ -1,0 +1,26 @@
+@mixin makeTheme($mainColor, $secondaryColor, $background, $highlight) {
+    & {
+        color: $mainColor;
+        background-color: $background;
+    }
+
+    .secondary-color {
+        color: $secondaryColor;
+    }
+
+    .highlight {
+        border-radius: 5px;
+        padding: 2px 4px;
+        background-color: $highlight;
+    }
+
+    .background {
+        background-color: $background ;
+    }
+}
+
+@mixin flex($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
