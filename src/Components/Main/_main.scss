@@ -1,0 +1,18 @@
+@use '../../Sass/Abstracts/mixins' as *;
+
+.main-section {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    background-color: #0a192f;
+    height: 90vh;
+}
+
+.main-section > article {
+    margin: 0 60px;
+}
+
+.bitmoji-container > img {
+    width: 400px;
+    max-width: 80vw;
+    height: auto;
+}

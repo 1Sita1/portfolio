@@ -1,5 +1,6 @@
 import { type } from "@testing-library/user-event/dist/type";
 import { FunctionComponent } from "react";
+import './_main.scss'
 
 type MainProps = {
 
@@ -15,7 +16,9 @@ const Main: React.FC = () => {
                 <h2>And I love Web</h2>
             </article>
             <article>
-                <div style={{height: "400px", width: "400px", backgroundColor: "brown"}}></div>
+                <figure className="bitmoji-container">
+                    <img src="/Img/bitmoji.png"></img>
+                </figure>
             </article>
         </section>
     )

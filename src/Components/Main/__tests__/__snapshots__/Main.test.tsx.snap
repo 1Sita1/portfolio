@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main tests renders correctly 1`] = `
+<section
+  className="fullscreen main-section"
+>
+  <article>
+    <h1>
+      Hi
+    </h1>
+    <h2>
+      I am Arsenii
+    </h2>
+    <h2>
+      And I love Web
+    </h2>
+  </article>
+  <article>
+    <div
+      style={
+        Object {
+          "backgroundColor": "brown",
+          "height": "400px",
+          "width": "400px",
+        }
+      }
+    />
+  </article>
+</section>
+`;

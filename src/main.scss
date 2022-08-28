@@ -1,0 +1,26 @@
+@use "./Sass/Abstracts/colors" as *;
+@use "./Sass/Abstracts/mixins" as *;
+@use "./Sass/reset";
+@use "./Sass/Abstracts/typography";
+
+$central-scope-width: 900px;
+
+.darkTheme {
+    @include makeTheme($gray-200, $dark-400, $dark-600, $green-700)
+}
+
+.central-scope {
+    width: 100%;
+
+    & > * {
+        width: $central-scope-width;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+

@@ -1,0 +1,5 @@
+@use '../../Sass/Abstracts/mixins' as *;
+
+.about-wrapper {
+    @include flex(center, center)
+}
