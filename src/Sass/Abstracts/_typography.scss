@@ -1,3 +1,9 @@
+@use "./colors" as *;
+
 p {
     text-align: left;
+}
+
+a {
+    color: $dark-400;
 }

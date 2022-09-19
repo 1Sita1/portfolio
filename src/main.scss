@@ -3,6 +3,7 @@
 @use "./Sass/reset";
 @use "./Sass/Abstracts/typography";
 
+
 $central-scope-width: 900px;
 
 .darkTheme {
@@ -10,17 +11,11 @@ $central-scope-width: 900px;
 }
 
 .central-scope {
-    width: 100%;
-
-    & > * {
-        width: $central-scope-width;
-        max-width: 90%;
-        margin: 0 auto;
-    }
+    width: $central-scope-width;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .text-center {
     text-align: center;
 }
-
-

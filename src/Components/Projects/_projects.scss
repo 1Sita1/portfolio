@@ -1,0 +1,11 @@
+@use "../../Sass/Abstracts/mixins" as *;
+@use "../../Sass/Abstracts/colors" as *;
+
+.projects-section {
+    background-color: $gray-900;
+}
+
+.projects-container {
+    @include flex(center, center);
+    flex-wrap: wrap;
+}

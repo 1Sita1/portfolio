@@ -1,0 +1,12 @@
+@use "../../Sass/Abstracts/colors" as *;
+
+.github-link {
+    background-color: red;
+}
+
+.github-link::after {
+    content: "sfdsfsddd";
+    width: 32px;
+    height: 32px;
+    background-image: url("/Img/github.png");
+}

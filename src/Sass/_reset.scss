@@ -1,8 +1,15 @@
+@use "../Sass/Abstracts/colors" as *;
+
 * {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
 }
 
 h1 {
@@ -17,9 +24,7 @@ h3 {
     font-size: 36px;
 }
 
-h2 {
-
-}
+h2 {}
 
 body {
     margin: 0;

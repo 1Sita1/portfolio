@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 h1 {
   font-size: 64px;
 }
@@ -25,6 +30,10 @@ p {
   text-align: left;
 }
 
+a {
+  color: #373A40;
+}
+
 .darkTheme {
   color: #E9ECEF;
   background-color: #25262B;
@@ -42,9 +51,6 @@ p {
 }
 
 .central-scope {
-  width: 100%;
-}
-.central-scope > * {
   width: 900px;
   max-width: 90%;
   margin: 0 auto;
