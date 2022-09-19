@@ -1,4 +1,5 @@
 @use "../../Sass/Abstracts/colors" as *;
+@use "../../Sass/Abstracts/mixins" as *;
 
 .project {
     padding: 20px;
@@ -24,4 +25,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.github-link {
+    @include flex(center, center);
+}
+.github-link * {
+    margin: 0 2px;
 }

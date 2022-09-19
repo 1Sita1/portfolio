@@ -1,7 +1,6 @@
 import { Project as TProject } from "../../Types/Types"
 import Technology from "../Technology/Technology"
 import { FlipCard } from 'react-flipme'
-import Github from "../Github/Github"
 import "./_project.scss"
 
 const Project: React.FC<TProject> = (project: TProject) => {
@@ -25,7 +24,10 @@ const Project: React.FC<TProject> = (project: TProject) => {
                         }
                     </div>
                     <div>
-                        <Github link={project.link} />
+                        <a href={project.link} target="_blank" className="github-link">
+                            <span>Github</span> 
+                            <img src="/Img/github.png" width="16px" height="16px"></img>
+                        </a>
                     </div>
                 </div>
             </FlipCard.Back>
