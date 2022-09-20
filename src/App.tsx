@@ -1,6 +1,8 @@
 import About from "./Components/About/About"
 import Main from "./Components/Main/Main"
 import Projects from "./Components/Projects/Projects"
+import Sketch from "react-p5";
+import { useEffect, useRef, useState } from "react";
 
 const projects = [
     {
@@ -58,10 +60,27 @@ const projects = [
 ]
 
 function App() {
+    const [width, setWidth] = useState<number>(100)
+    const appRef = useRef<HTMLHeadingElement>(null)
+    
+    useEffect(() => {
+        setWidth(appRef.current?.clientWidth ?? 0)
+    })
+    console.log(width)
     return (
-        <div className="darkTheme">
+        <div className="darkTheme" ref={appRef}>
             <Main />
             <Projects projects={projects} />
+            <div>{}</div>
+            <div className="p5-container">
+                { 
+                    width > 100 ?? <Sketch setup={(p5, canvasParentRef) => {
+                        p5.createCanvas(width, appRef?.current?.clientHeight ?? 100).parent(canvasParentRef);
+                        p5.background(0)
+                    }} draw={(p5) => { 
+                    }} />
+                }
+            </div>
         </div>
     )
 }

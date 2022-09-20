@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flipme": "^1.0.3",
+    "react-p5": "^1.3.30",
     "react-scripts": "5.0.1",
     "react-tooltip": "^4.2.21",
     "sass": "^1.54.5",
