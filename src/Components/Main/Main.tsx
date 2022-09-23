@@ -10,12 +10,12 @@ const Main: React.FC = () => {
 
     return (
         <section className="fullscreen main-section">
-            <article>
+            <article className="z20">
                 <h1>Hi</h1>
                 <h2>I am Arsenii</h2>
                 <h2>And I love Web</h2>
             </article>
-            <article>
+            <article className="z20">
                 <figure className="bitmoji-container">
                     <img src="/Img/bitmoji.png"></img>
                 </figure>

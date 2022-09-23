@@ -10,6 +10,10 @@ $central-scope-width: 900px;
     @include makeTheme($gray-200, $dark-400, $dark-600, $green-700)
 }
 
+.app {
+
+}
+
 .central-scope {
     width: $central-scope-width;
     max-width: 90%;
@@ -26,4 +30,12 @@ $central-scope-width: 900px;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.z10 {
+    z-index: 10;
+}
+.z20 {
+    position: relative;
+    z-index: 20;
 }

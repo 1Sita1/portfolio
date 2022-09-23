@@ -2,10 +2,124 @@
 @use "../../Sass/Abstracts/colors" as *;
 
 .projects-section {
-    margin-top: 30px;
+    position: relative;
+    margin-top: 20px;
 }
+
+.projects-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.shape1 {
+    left: -10%;
+    top: 20%;
+    transform: rotate(27deg);
+}
+.shape1::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background-color: green;
+}
+.shape1::after {
+    position: absolute;
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 100px;
+    height: 50px;
+    transform: rotate(90deg);
+    background-color: green;
+}
+
+.shape2 {
+    left: 115%;
+    top: 70%;
+    transform: rotate(122deg);
+}
+
+.shape2::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+}
+
+.shape2::after {
+    position: absolute;
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 100px;
+    height: 50px;
+    transform: rotate(90deg);
+    background-color: yellow;
+}
+
+.shape3 {
+    height: 200px;
+    background-color: rgb(52, 52, 149);
+    left: 0%;
+    top: 60%;
+    transform: rotate(115deg);
+}
+
+.shape4 {
+    background-color: rgb(255, 174, 0);
+    width: 100px;
+    left: 30%;
+    top: 50%;
+    transform: rotate(-21deg);
+}
+.shape4::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 200px;
+    background-color: rgb(255, 174, 0);
+}
+
+.shape5 {
+    background-color: purple;
+    height: 100px;
+    left: 45%;
+    top: 20%;
+    transform: rotate(190deg);
+}
+.shape5::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 150px;
+    background-color: purple;
+    transform: rotate(90deg)
+}
+
 
 .projects-container {
     @include flex(center, center);
     flex-wrap: wrap;
+    margin-top: 30px;
 }

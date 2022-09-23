@@ -6,7 +6,7 @@ import "./_project.scss"
 const Project: React.FC<TProject> = (project: TProject) => {
 
     return (
-        <FlipCard width="350px" height="250px" className={"project"}>
+        <FlipCard width="350px" height="250px" className="project z20">
             <FlipCard.Front>
                 <div className="project-front">
                     <img className="project-img" src={project.img} />
@@ -15,8 +15,8 @@ const Project: React.FC<TProject> = (project: TProject) => {
             </FlipCard.Front>
             <FlipCard.Back>
                 <div className="project-back">
-                    <h4>Project Title</h4>
-                    <div>
+                    <h4>{project.header}</h4>
+                    <div className="tech-container">
                         {
                             project.technologies.map((technology, id) => {
                                 return <Technology {...technology} key={id} />

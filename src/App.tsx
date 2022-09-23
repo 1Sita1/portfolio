@@ -1,7 +1,7 @@
 import About from "./Components/About/About"
 import Main from "./Components/Main/Main"
 import Projects from "./Components/Projects/Projects"
-import Sketch from "react-p5";
+import Snake from "./Components/Snake/Snake";
 import { useEffect, useRef, useState } from "react";
 
 const projects = [
@@ -9,78 +9,135 @@ const projects = [
         header: "Interesting Places",
         img: "/Img/Projects/Interesting_Places.png",
         body: "test",
-        link: "https://github.com",
+        link: "https://github.com/1Sita1/places",
         technologies: [
             {
                 name: "React",
                 img: "/Img/Technologies/React.png",
                 origin: "https://reactjs.org/"
+            },
+            {
+                name: "JS",
+                img: "/Img/Technologies/js.png",
+                origin: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+                name: "Bootstrap",
+                img: "/Img/Technologies/bt.png",
+                origin: "https://getbootstrap.com/"
+            },
+            {
+                name: "Express",
+                img: "/Img/Technologies/ex.png",
+                origin: "https://expressjs.com/"
+            },
+            {
+                name: "Mongo db (mongoose)",
+                img: "/Img/Technologies/mdb.png",
+                origin: "https://www.mongodb.com/"
+            },
+            {
+                name: "JWT",
+                img: "/Img/Technologies/jwt.jpg",
+                origin: "https://jwt.io/" 
+            },
+            {
+                name: "Jest (backend)",
+                img: "/Img/Technologies/jest.png",
+                origin: "https://jestjs.io/"
             }
         ]
     },
     {
-        header: "Interesting Places",
-        img: "/Img/Projects/Interesting_Places.png",
+        header: "React-flipme",
+        img: "/Img/Projects/flip.gif",
         body: "test",
-        link: "https://github.com",
+        link: "https://github.com/1Sita1/react-flipme",
         technologies: [
             {
                 name: "React",
                 img: "/Img/Technologies/React.png",
                 origin: "https://reactjs.org/"
+            },
+            {
+                name: "Typescript",
+                img: "/Img/Technologies/ts.jpg",
+                origin: "https://www.typescriptlang.org/"
+            },
+            {
+                name: "Styled components",
+                img: "/Img/Technologies/sc.png",
+                origin: "https://styled-components.com/"
             }
         ]
     },
     {
-        header: "Interesting Places",
-        img: "/Img/Projects/Interesting_Places.png",
+        header: "This portfolio",
+        img: "/Img/Projects/pf.jpg",
         body: "test",
-        link: "https://github.com",
+        link: "https://github.com/1Sita1/portfolio",
         technologies: [
             {
                 name: "React",
                 img: "/Img/Technologies/React.png",
                 origin: "https://reactjs.org/"
+            },
+            {
+                name: "Typescript",
+                img: "/Img/Technologies/ts.jpg",
+                origin: "https://www.typescriptlang.org/"
+            },
+            {
+                name: "Sass",
+                img: "/Img/Technologies/sass.jpg",
+                origin: "https://sass-lang.com/"
+            },
+            {
+                name: "p5js",
+                img: "/Img/Technologies/p5.png",
+                origin: "https://p5js.org/"
             }
         ]
     },
     {
-        header: "Interesting Places",
-        img: "/Img/Projects/Interesting_Places.png",
+        header: "Square game",
+        img: "/Img/Projects/square.png",
         body: "test",
-        link: "https://github.com",
+        link: "https://github.com/1Sita1/Squares",
         technologies: [
             {
-                name: "React",
-                img: "/Img/Technologies/React.png",
-                origin: "https://reactjs.org/"
+                name: "JS",
+                img: "/Img/Technologies/js.png",
+                origin: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+                name: "p5js",
+                img: "/Img/Technologies/p5.png",
+                origin: "https://p5js.org/"
             }
         ]
     },
 ]
 
+
 function App() {
-    const [width, setWidth] = useState<number>(100)
+    const [width, setWidth] = useState<number>(0)
+    const [height, setHeight] = useState<number>(0)
     const appRef = useRef<HTMLHeadingElement>(null)
     
     useEffect(() => {
         setWidth(appRef.current?.clientWidth ?? 0)
+        setHeight(appRef.current?.clientHeight ?? 0)
     })
-    console.log(width)
+
+
     return (
-        <div className="darkTheme" ref={appRef}>
+        <div className="darkTheme app" ref={appRef}>
             <Main />
             <Projects projects={projects} />
-            <div>{}</div>
-            <div className="p5-container">
-                { 
-                    width > 100 ?? <Sketch setup={(p5, canvasParentRef) => {
-                        p5.createCanvas(width, appRef?.current?.clientHeight ?? 100).parent(canvasParentRef);
-                        p5.background(0)
-                    }} draw={(p5) => { 
-                    }} />
-                }
-            </div>
+            { 
+                width !== 0 ? <Snake width={width} height={height}/> : null
+            }
         </div>
     )
 }
