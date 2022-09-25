@@ -50,6 +50,10 @@ a {
   background-color: #25262B;
 }
 
+.app {
+  cursor: none;
+}
+
 .central-scope {
   width: 900px;
   max-width: 90%;
