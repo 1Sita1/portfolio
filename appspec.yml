@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /build
     destintaion: /var/www/arsenii.dev
-hook:
+hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
