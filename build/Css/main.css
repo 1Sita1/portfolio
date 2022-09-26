@@ -1,0 +1,82 @@
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  text-align: left;
+}
+
+a {
+  color: #373A40;
+}
+
+.darkTheme {
+  color: #E9ECEF;
+  background-color: #25262B;
+}
+.darkTheme .secondary-color {
+  color: #373A40;
+}
+.darkTheme .highlight {
+  border-radius: 5px;
+  padding: 2px 4px;
+  background-color: #37B24D;
+}
+.darkTheme .background {
+  background-color: #25262B;
+}
+
+.app {
+  cursor: none;
+}
+
+.central-scope {
+  width: 900px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p5-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.z10 {
+  z-index: 10;
+}
+
+.z20 {
+  position: relative;
+  z-index: 20;
+}/*# sourceMappingURL=main.css.map */

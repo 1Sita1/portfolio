@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /build
+    destintaion: /var/www/arsenii.dev
+hook:
+  ApplicationStop:
+    - location: scripts/application_stop.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/application_start.sh
+    timeout: 300
+    runas: ec2-user
