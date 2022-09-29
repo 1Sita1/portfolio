@@ -6,10 +6,11 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
     {
-        header: "Interesting Places",
+        header: "PlacesShare",
         img: "/Img/Projects/Interesting_Places.png",
         body: "test",
-        link: "https://github.com/1Sita1/places",
+        link: "https://placesshare.com",
+        source: "https://github.com/1Sita1/places",
         technologies: [
             {
                 name: "React",
@@ -53,6 +54,7 @@ const projects = [
         img: "/Img/Projects/flip.gif",
         body: "test",
         link: "https://github.com/1Sita1/react-flipme",
+        source: "https://github.com/1Sita1/react-flipme",
         technologies: [
             {
                 name: "React",
@@ -75,7 +77,8 @@ const projects = [
         header: "This portfolio",
         img: "/Img/Projects/pf.jpg",
         body: "test",
-        link: "https://github.com/1Sita1/portfolio",
+        link: "https://arsenii.dev",
+        source: "https://github.com/1Sita1/portfolio",
         technologies: [
             {
                 name: "React",
@@ -103,7 +106,8 @@ const projects = [
         header: "Square game",
         img: "/Img/Projects/square.png",
         body: "test",
-        link: "https://github.com/1Sita1/Squares",
+        link: "#",
+        source: "https://github.com/1Sita1/Squares",
         technologies: [
             {
                 name: "JS",
@@ -123,20 +127,25 @@ const projects = [
 function App() {
     const [width, setWidth] = useState<number>(0)
     const [height, setHeight] = useState<number>(0)
+    const [heroWidth, setHeroWidth] = useState<number>(0)
+    const [heroHeight, setHeroHeight] = useState<number>(0)
     const appRef = useRef<HTMLHeadingElement>(null)
+    const heroRef = useRef<HTMLHeadingElement>(null)
     
     useEffect(() => {
         setWidth(appRef.current?.clientWidth ?? 0)
         setHeight(appRef.current?.clientHeight ?? 0)
+        setHeroHeight(heroRef.current?.clientHeight ?? 0)
+        setHeroWidth(heroRef.current?.clientWidth ?? 0)
     })
 
 
     return (
         <div className="darkTheme app" ref={appRef}>
-            <Main />
+            <Main ref={heroRef}/>
             <Projects projects={projects} />
             { 
-                width !== 0 ? <Snake width={width} height={height}/> : null
+                width >= 600 ? <Snake width={width} height={height} heroHeight={heroHeight} heroWidth={heroWidth}/> : null
             }
         </div>
     )

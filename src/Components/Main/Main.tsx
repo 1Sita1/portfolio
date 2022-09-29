@@ -1,15 +1,17 @@
+import { SelectorMatcherOptions } from "@testing-library/react";
 import { type } from "@testing-library/user-event/dist/type";
 import { FunctionComponent } from "react";
+import React from "react";
 import './_main.scss'
 
 type MainProps = {
 
 }
 
-const Main: React.FC = () => {
+const Main = React.forwardRef<HTMLDivElement, MainProps>((props: MainProps, ref) => {
 
     return (
-        <section className="fullscreen main-section">
+        <section className="fullscreen main-section" ref={ref}>
             <article className="z20">
                 <h1>Hi!</h1>
                 <h2>I am Arsenii</h2>
@@ -22,6 +24,6 @@ const Main: React.FC = () => {
             </article>
         </section>
     )
-}
+})
 
 export default Main

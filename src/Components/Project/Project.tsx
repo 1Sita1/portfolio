@@ -10,12 +10,13 @@ const Project: React.FC<TProject> = (project: TProject) => {
             <FlipCard.Front>
                 <div className="project-front">
                     <img className="project-img" src={project.img} />
-                    <h4>{project.header}</h4>
                 </div>
             </FlipCard.Front>
             <FlipCard.Back>
                 <div className="project-back">
-                    <h4>{project.header}</h4>
+                    <a href={project.link} target="_blank">
+                        <h4>{project.header}</h4>
+                    </a>
                     <div className="tech-container">
                         {
                             project.technologies.map((technology, id) => {
@@ -24,7 +25,7 @@ const Project: React.FC<TProject> = (project: TProject) => {
                         }
                     </div>
                     <div>
-                        <a href={project.link} target="_blank" className="github-link">
+                        <a href={project.source} target="_blank" className="github-link">
                             <span>Github</span> 
                             <img src="/Img/github.png" width="16px" height="16px"></img>
                         </a>
