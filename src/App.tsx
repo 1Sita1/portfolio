@@ -3,6 +3,7 @@ import Main from "./Components/Main/Main"
 import Projects from "./Components/Projects/Projects"
 import Snake from "./Components/Snake/Snake";
 import { useEffect, useRef, useState } from "react";
+import Contact from "./Components/Contact/Contact";
 
 const projects = [
     {
@@ -147,6 +148,7 @@ function App() {
             { 
                 width >= 600 ? <Snake width={width} height={height} heroHeight={heroHeight} heroWidth={heroWidth}/> : null
             }
+            <Contact />
         </div>
     )
 }

@@ -1,0 +1,16 @@
+@use "../../Sass/Abstracts/mixins" as *;
+
+.contact {
+    @include flex(center, center);
+    flex-direction: column;
+}
+
+.contacts-wrapper {
+    margin-top: 40px;
+    @include flex(center, space-between);
+    width: 100%;
+}
+
+.contact-block {
+    cursor: default;
+}
