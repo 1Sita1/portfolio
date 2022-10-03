@@ -15,7 +15,7 @@ const Snake: React.FC<SnakeProps> = ({
     heroHeight,
     heroWidth
 }: SnakeProps): React.ReactElement => {
-    height = height - 5
+    height = height + 20
     heroHeight = heroHeight - 12
 
     let gp5: p5Types

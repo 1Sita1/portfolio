@@ -12,5 +12,13 @@
 }
 
 .contact-block {
-    cursor: default;
+    @include flex(center, center);
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.contact-block > span {
+    color: rgb(182, 182, 182);
+    font-size: 18px;
+    margin-top: 15px;
 }
