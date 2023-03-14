@@ -1,12 +1,12 @@
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Main from "../Components/Main/Main"
-import Projects from "../Components/Projects/Projects"
-import Snake from "../Components/Snake/Snake"
+import Main from "../../Components/Main/Main"
+import Projects from "../../Components/Projects/Projects"
+import Snake from "../../Components/Snake/Snake"
 import { useEffect, useRef, useState } from "react"
-import Contact from "../Components/Contact/Contact"
-import Footer from "../Components/Footer/Footer"
-import projects from "../projects.json"
+import Contact from "../../Components/Contact/Contact"
+import Footer from "../../Components/Footer/Footer"
+import projects from "../../projects.json"
 import ReactTooltip from "react-tooltip"
 
 
